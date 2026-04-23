@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Project</title>
+    <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
     <script src="CurrencyConvertor.js" defer></script>
 </head>
 <body>
     <div id="root">
-         <h1>Currency Convertor Project</h1>
-        <section>
-            <span>From</span>
-            <select name="" id="fromCurrency">
-            </select>
-            <input type="number" placeholder="Enter amount" id="amount">
-            <span>Convert to</span>
-            <select name="" id="toCurrency">
-            </select>
+         <h1>💱 Currency Converter</h1>
+         <div class="card">
+            
+            <div class="input-group">
+                <label>Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount" value="1">
+            </div>
+
+            <div class="row">
+                <div>
+                    <label>From</label>
+                    <select id="fromCurrency"></select>
+                </div>
+                
+                <button id="swap">🔄</button>
+                
+                <div>
+                    <label>To</label>
+                    <select id="toCurrency"></select>
+                </div>
+            </div>
+
             <button id="btn">Convert</button>
-            <input type="number" placeholder="Converted amount" id="convertedAmount" disabled>
-        </section>
+
+            <div class="result-box">
+                <p id="resultText">Converted Amount</p>
+                <input type="text" id="convertedAmount" disabled>
+            </div>
+
+        </div>
     </div>    
 </body>
 </html>
